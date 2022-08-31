@@ -78,18 +78,19 @@ Tabla de conversion bcd a 7 segmentos ánodo común.
 
 /**
 Tabla de conversion bcd a 7 segmentos cátodo común
-  Codigo bcd		a	b	c	d	e	f	g   dp
-  0				1	1	1	1	1	1	0   0
-  1				0	1	1	0	0	0	0
-  2				1	1	0	1	1	0	1
-  3				1	1	1	1	0	0	1
-  4				0	1	1	0	0	1	1
-  5				1	0	1	1	0	1	1
-  6				0	0	1	1	1	1	1
-  7				1	1	1	0	0	0	0
-  8				1	1	1	1	1	1	1
-  9				1	1	1	0	0	1	1
+	Codigo bcd		a	b	c	d	e	f	g   dp
+	0				1	1	1	1	1	1	0   0
+	1				0	1	1	0	0	0	0
+ 	2				1	1	0	1	1	0	1
+ 	3				1	1	1	1	0	0	1
+ 	4				0	1	1	0	0	1	1
+	5				1	0	1	1	0	1	1
+	6				0	0	1	1	1	1	1
+	7				1	1	1	0	0	0	0
+ 	8				1	1	1	1	1	1	1
+	9				1	1	1	0	0	1	1
 */
+uint8_t Tabla_Digitos_7seg[] = { 0x3f, 0x06, 0x5B, 0x4f, 0x66, 0x6D, 0x7C, 0x07, 0x7f, 0x67};
 // static uint8_t Tabla_Digitos_BCD_7seg[ ] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
 /*********************************************************************************************************
@@ -183,13 +184,8 @@ PB1 -> SEGMENTO DP
 /*
 ** The main function. Application starts here.
 */
-int main(void)
-{
-  while (1)
-  {
-    
-    
-  }
+int main(void){
+  PORTD=Tabla_Digitos_7seg[5];
 }
 /*********************************************************************************************************
 ** end of file
