@@ -1,0 +1,155 @@
+<circuit version="1.0.0-RC3" rev="1148" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="1" >
+
+<item itemtype="Bus" CircId="Bus-218" mainComp="false" Show_id="false" Show_Val="false" Pos="-160,-296" rotation="0" hflip="-1" vflip="1" label="Bus-218" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Num_Bits="8 _Bits" Start_Bit="0" />
+
+<item itemtype="Ground" CircId="Ground-142" mainComp="false" Show_id="false" Show_Val="false" Pos="-184,-252" rotation="0" hflip="1" vflip="1" label="Ground-142" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="Seven Segment" CircId="Seven Segment-138" mainComp="false" Show_id="false" Show_Val="false" Pos="-192,-324" rotation="0" hflip="1" vflip="1" label="Seven Segment-138" idLabPos="-111,36" labelrot="0" valLabPos="0,0" valLabRot="0" NumDisplays="1 _7seg" Color="Rojo" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="0.02 A" Resistance="1 Ω" />
+
+<item itemtype="ResistorDip" CircId="ResistorDip-30" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-120,-328" rotation="0" hflip="1" vflip="1" label="ResistorDip-108" idLabPos="-24,-40" labelrot="0" valLabPos="5,-26" valLabRot="90" Resistance="220 Ω" Size="8 _Resist." />
+
+<item itemtype="Subcircuit" CircId="Nano-26" mainComp="false" Show_id="true" Show_Val="false" Pos="-92,-400" rotation="0" hflip="1" vflip="1" label="Arduino Nano-1" idLabPos="8,-20" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
+<mainCompProps itemtype="MCU" CircId="26_m328 TQFP-269" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="26_m328 TQFP-269" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program=".pio/build/nanoatmega328/firmware.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+</item>
+
+<item itemtype="Ground" CircId="Ground-21" mainComp="false" Show_id="false" Show_Val="false" Pos="132,-188" rotation="0" hflip="1" vflip="1" label="Ground-90" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-20" mainComp="false" Show_id="true" Show_Val="false" Pos="84,-228" rotation="0" hflip="1" vflip="1" label="Bot1" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="ResistorDip" CircId="ResistorDip-19" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="32,-420" rotation="-90" hflip="1" vflip="1" label="RPU" idLabPos="-24,-40" labelrot="0" valLabPos="5,-26" valLabRot="90" Resistance="10 kΩ" Size="4 _Resist." />
+
+<item itemtype="Push" CircId="Push-16" mainComp="false" Show_id="true" Show_Val="false" Pos="84,-320" rotation="0" hflip="1" vflip="1" label="bot3" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Push" CircId="Push-15" mainComp="false" Show_id="true" Show_Val="false" Pos="84,-272" rotation="0" hflip="1" vflip="1" label="bot2" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Push" CircId="Push-14" mainComp="false" Show_id="true" Show_Val="false" Pos="80,-372" rotation="0" hflip="1" vflip="1" label="bot4" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" Poles="1 _Poles" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-13" mainComp="false" Show_id="false" Show_Val="true" Pos="-16,-444" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-17" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Voltage="5 V" />
+
+<item itemtype="Bus" CircId="Bus-190" mainComp="false" Show_id="false" Show_Val="false" Pos="-236,-292" rotation="0" hflip="-1" vflip="1" label="Bus-190" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Num_Bits="8 _Bits" Start_Bit="0" />
+
+<item itemtype="Node" CircId="Node-114" mainComp="false" Pos="36,-368" />
+
+<item itemtype="Node" CircId="Node-111" mainComp="false" Pos="24,-320" />
+
+<item itemtype="Node" CircId="Node-108" mainComp="false" Pos="16,-304" />
+
+<item itemtype="Node" CircId="Node-105" mainComp="false" Pos="8,-296" />
+
+<item itemtype="Node" CircId="Node-18" mainComp="false" Pos="8,-444" />
+
+<item itemtype="Node" CircId="Node-17" mainComp="false" Pos="16,-444" />
+
+<item itemtype="Node" CircId="Node-12" mainComp="false" Pos="28,-444" />
+
+<item itemtype="Node" CircId="Node-3" mainComp="false" Pos="132,-224" />
+
+<item itemtype="Node" CircId="Node-2" mainComp="false" Pos="132,-272" />
+
+<item itemtype="Node" CircId="Node-1" mainComp="false" Pos="132,-320" />
+
+<item itemtype="Connector" uid="Connector-32" startpinid="ResistorDip-19-resistor3-ePin7" endpinid="Node-12-1" pointList="32,-436,32,-444,28,-444" />
+
+<item itemtype="Connector" uid="Connector-34" startpinid="Node-12-2" endpinid="Node-17-1" pointList="28,-444,16,-444" />
+
+<item itemtype="Connector" uid="Connector-35" startpinid="ResistorDip-19-resistor0-ePin1" endpinid="Node-18-0" pointList="8,-436,8,-444" />
+
+<item itemtype="Connector" uid="Connector-36" startpinid="ResistorDip-19-resistor2-ePin5" endpinid="Node-12-0" pointList="24,-436,24,-444,28,-444" />
+
+<item itemtype="Connector" uid="Connector-37" startpinid="ResistorDip-19-resistor1-ePin3" endpinid="Node-17-0" pointList="16,-436,16,-444" />
+
+<item itemtype="Connector" uid="Connector-38" startpinid="Node-17-2" endpinid="Node-18-1" pointList="16,-444,8,-444" />
+
+<item itemtype="Connector" uid="Connector-39" startpinid="Node-18-2" endpinid="Fixed Voltage-13-outnod" pointList="8,-444,0,-444" />
+
+<item itemtype="Connector" uid="Connector-40" startpinid="Nano-26-2" endpinid="ResistorDip-30-resistor0-ePin1" pointList="-84,-352,-104,-352" />
+
+<item itemtype="Connector" uid="Connector-42" startpinid="Nano-26-3" endpinid="ResistorDip-30-resistor1-ePin3" pointList="-84,-344,-104,-344" />
+
+<item itemtype="Connector" uid="Connector-46" startpinid="Nano-26-5" endpinid="ResistorDip-30-resistor3-ePin7" pointList="-84,-328,-104,-328" />
+
+<item itemtype="Connector" uid="Connector-48" startpinid="Nano-26-6" endpinid="ResistorDip-30-resistor4-ePin9" pointList="-84,-320,-104,-320" />
+
+<item itemtype="Connector" uid="Connector-50" startpinid="Nano-26-7" endpinid="ResistorDip-30-resistor5-ePin11" pointList="-84,-312,-104,-312" />
+
+<item itemtype="Connector" uid="Connector-52" startpinid="Nano-26-8" endpinid="ResistorDip-30-resistor6-ePin13" pointList="-84,-304,-104,-304" />
+
+<item itemtype="Connector" uid="Connector-54" startpinid="Nano-26-9" endpinid="ResistorDip-30-resistor7-ePin15" pointList="-84,-296,-104,-296" />
+
+<item itemtype="Connector" uid="Connector-88" startpinid="Push-20-switch0pinN" endpinid="Node-3-0" pointList="100,-228,132,-228,132,-224" />
+
+<item itemtype="Connector" uid="Connector-90" startpinid="Push-15-switch0pinN" endpinid="Node-2-0" pointList="100,-272,132,-272" />
+
+<item itemtype="Connector" uid="Connector-91" startpinid="Node-3-2" endpinid="Ground-21-Gnd" pointList="132,-224,132,-204" />
+
+<item itemtype="Connector" uid="Connector-92" startpinid="Push-16-switch0pinN" endpinid="Node-1-0" pointList="100,-320,132,-320" />
+
+<item itemtype="Connector" uid="Connector-93" startpinid="Node-2-2" endpinid="Node-3-1" pointList="132,-272,132,-224" />
+
+<item itemtype="Connector" uid="Connector-94" startpinid="Push-14-switch0pinN" endpinid="Node-1-1" pointList="96,-372,132,-372,132,-320" />
+
+<item itemtype="Connector" uid="Connector-95" startpinid="Node-1-2" endpinid="Node-2-1" pointList="132,-320,132,-272" />
+
+<item itemtype="Connector" uid="Connector-96" startpinid="ResistorDip-19-resistor3-ePin6" endpinid="Node-114-0" pointList="32,-404,32,-368,36,-368" />
+
+<item itemtype="Connector" uid="Connector-98" startpinid="ResistorDip-19-resistor2-ePin4" endpinid="Node-111-0" pointList="24,-404,24,-320" />
+
+<item itemtype="Connector" uid="Connector-100" startpinid="ResistorDip-19-resistor1-ePin2" endpinid="Node-108-0" pointList="16,-404,16,-304" />
+
+<item itemtype="Connector" uid="Connector-102" startpinid="ResistorDip-19-resistor0-ePin0" endpinid="Node-105-0" pointList="8,-404,8,-296" />
+
+<item itemtype="Connector" uid="Connector-104" startpinid="Nano-26-A0" endpinid="Node-105-1" pointList="-36,-296,8,-296" />
+
+<item itemtype="Connector" uid="Connector-106" startpinid="Node-105-2" endpinid="Push-20-pinP0" pointList="8,-296,8,-228,68,-228" />
+
+<item itemtype="Connector" uid="Connector-107" startpinid="Nano-26-A1" endpinid="Node-108-1" pointList="-36,-304,16,-304" />
+
+<item itemtype="Connector" uid="Connector-109" startpinid="Node-108-2" endpinid="Push-15-pinP0" pointList="16,-304,16,-272,68,-272" />
+
+<item itemtype="Connector" uid="Connector-110" startpinid="Nano-26-A2" endpinid="Node-111-1" pointList="-36,-312,-4,-312,-4,-320,24,-320" />
+
+<item itemtype="Connector" uid="Connector-112" startpinid="Node-111-2" endpinid="Push-16-pinP0" pointList="24,-320,68,-320" />
+
+<item itemtype="Connector" uid="Connector-113" startpinid="Nano-26-A3" endpinid="Node-114-1" pointList="-36,-320,-20,-320,-20,-368,36,-368" />
+
+<item itemtype="Connector" uid="Connector-115" startpinid="Node-114-2" endpinid="Push-14-pinP0" pointList="36,-368,64,-368,64,-372" />
+
+<item itemtype="Connector" uid="Connector-205" startpinid="Seven Segment-138-pin_a" endpinid="Bus-190-ePin1" pointList="-216,-348,-228,-348" />
+
+<item itemtype="Connector" uid="Connector-206" startpinid="Seven Segment-138-pin_b" endpinid="Bus-190-ePin2" pointList="-216,-340,-228,-340" />
+
+<item itemtype="Connector" uid="Connector-207" startpinid="Seven Segment-138-pin_c" endpinid="Bus-190-ePin3" pointList="-216,-332,-228,-332" />
+
+<item itemtype="Connector" uid="Connector-208" startpinid="Seven Segment-138-pin_d" endpinid="Bus-190-ePin4" pointList="-216,-324,-228,-324" />
+
+<item itemtype="Connector" uid="Connector-212" startpinid="Bus-190-ePin5" endpinid="Seven Segment-138-pin_e" pointList="-228,-316,-216,-316" />
+
+<item itemtype="Connector" uid="Connector-213" startpinid="Seven Segment-138-pin_f" endpinid="Bus-190-ePin6" pointList="-216,-308,-228,-308" />
+
+<item itemtype="Connector" uid="Connector-214" startpinid="Bus-190-ePin7" endpinid="Seven Segment-138-pin_g" pointList="-228,-300,-216,-300" />
+
+<item itemtype="Connector" uid="Connector-215" startpinid="Bus-190-ePin8" endpinid="Seven Segment-138-pin_dot" pointList="-228,-292,-200,-292" />
+
+<item itemtype="Connector" uid="Connector-216" startpinid="Seven Segment-138-pin_commona" endpinid="Ground-142-Gnd" pointList="-184,-292,-184,-268" />
+
+<item itemtype="Connector" uid="Connector-219" startpinid="ResistorDip-30-resistor0-ePin0" endpinid="Bus-218-ePin1" pointList="-136,-352,-152,-352" />
+
+<item itemtype="Connector" uid="Connector-220" startpinid="Bus-218-ePin2" endpinid="ResistorDip-30-resistor1-ePin2" pointList="-152,-344,-136,-344" />
+
+<item itemtype="Connector" uid="Connector-221" startpinid="ResistorDip-30-resistor2-ePin4" endpinid="Bus-218-ePin3" pointList="-136,-336,-152,-336" />
+
+<item itemtype="Connector" uid="Connector-222" startpinid="Bus-218-ePin4" endpinid="ResistorDip-30-resistor3-ePin6" pointList="-152,-328,-136,-328" />
+
+<item itemtype="Connector" uid="Connector-223" startpinid="ResistorDip-30-resistor4-ePin8" endpinid="Bus-218-ePin5" pointList="-136,-320,-152,-320" />
+
+<item itemtype="Connector" uid="Connector-224" startpinid="Bus-218-ePin6" endpinid="ResistorDip-30-resistor5-ePin10" pointList="-152,-312,-136,-312" />
+
+<item itemtype="Connector" uid="Connector-225" startpinid="ResistorDip-30-resistor6-ePin12" endpinid="Bus-218-ePin7" pointList="-136,-304,-152,-304" />
+
+<item itemtype="Connector" uid="Connector-226" startpinid="ResistorDip-30-resistor7-ePin14" endpinid="Bus-218-ePin8" pointList="-136,-296,-152,-296" />
+
+<item itemtype="Connector" uid="Connector-227" startpinid="Bus-190-busPinI" endpinid="Bus-218-busPinI" pointList="-236,-348,-236,-376,-160,-376,-160,-352" />
+
+<item itemtype="Connector" uid="Connector-44" startpinid="Nano-26-4" endpinid="ResistorDip-30-resistor2-ePin5" pointList="-84,-336,-104,-336" />
+
+</circuit>

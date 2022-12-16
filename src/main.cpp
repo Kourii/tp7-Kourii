@@ -78,29 +78,30 @@ Tabla de conversion bcd a 7 segmentos ánodo común.
 
 /**
 Tabla de conversion bcd a 7 segmentos cátodo común
-	Codigo bcd		a	b	c	d	e	f	g   dp
-	0				      1	1	1	1	1	1	0   0
-	1				      0	1	1	0	0	0	0
- 	2				      1	1	0	1	1	0	1
- 	3				      1	1	1	1	0	0	1
- 	4				      0	1	1	0	0	1	1
-	5				      1	0	1	1	0	1	1
-	6				      0	0	1	1	1	1	1
-	7				      1	1	1	0	0	0	0
- 	8				      1	1	1	1	1	1	1
-	9				      1	1	1	0	0	1	1
+  Codigo bcd		a	b	c	d	e	f	g   dp
+  0				      1	1	1	1	1	1	0   0
+  1				      0	1	1	0	0	0	0
+  2				      1	1	0	1	1	0	1
+  3				      1	1	1	1	0	0	1
+  4				      0	1	1	0	0	1	1
+  5				      1	0	1	1	0	1	1
+  6				      0	0	1	1	1	1	1
+  7				      1	1	1	0	0	0	0
+  8				      1	1	1	1	1	1	1
+  9				      1	1	1	0	0	1	1
 */
 uint8_t Tabla_Digitos_7seg[] = {
-0b1111110,//0
-0b0110000,//1
-0b1101101,//2
-0b1111001,
-0b0110011,
-0b1011011,//5
-0b0011111,
-0b1110000,
-0b1111111,
-0b1110011};
+    0b11111100, // 0
+    0b00011000, // 1
+    0b01101101, // 2
+    0b00111101, // 3
+    0b10011001, // 4
+    0b10110101, // 5
+    0b11110101, // 6
+    0b00011100, // 7
+    0b11111101, // 8
+    0b10011101  // 9
+};
 
 // static uint8_t Tabla_Digitos_BCD_7seg[ ] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
@@ -136,11 +137,11 @@ uint8_t time_bt_t = 0;
  *********************************************************************************************************/
 void config_TIMER0(void)
 {
-  TCCR0A = (1 << WGM01);              //Activa el bit CTC (clear timer on compare match)
-                                      //del TCCR0A (timer counter/control register)
-  OCR0A = 155;                        //valor de comparacion de int cada 10ms
-  TCCR0B = (1 << CS00) | (1 << CS02); //preescaler dividiendo 1024
-  TIMSK0 = (1 << OCIE0A);             //Habilita las interrupciones entimer compare
+  TCCR0A = (1 << WGM01);              // Activa el bit CTC (clear timer on compare match)
+                                      // del TCCR0A (timer counter/control register)
+  OCR0A = 155;                        // valor de comparacion de int cada 10ms
+  TCCR0B = (1 << CS00) | (1 << CS02); // preescaler dividiendo 1024
+  TIMSK0 = (1 << OCIE0A);             // Habilita las interrupciones entimer compare
 }
 /*********************************************************************************************************
  *** FUNCIONES GLOBALES AL MODULO
@@ -170,7 +171,6 @@ ISR(TIMER0_COMPA_vect)
   {
     time_bt_t--;
   }
-  
 }
 /*
 
@@ -195,24 +195,54 @@ PB1 -> SEGMENTO DP
 /*
 ** The main function. Application starts here.
 */
-int main(void){
+int main(void)
+{
 
-  DDRC &=~(1<<PC0);
-  DDRC &=~(1<<PC1);
-  DDRC &=~(1<<PC2);
-  DDRC &=~(1<<PC3);
+  DDRC &= ~(1 << PC0);
+  DDRC &= ~(1 << PC1);
+  DDRC &= ~(1 << PC2);
+  DDRC &= ~(1 << PC3);
 
-  DDRD  |=(1<<PD2);
-  DDRD  |=(1<<PD3);
-  DDRD  |=(1<<PD4);
-  DDRD  |=(1<<PD5);
-  DDRD  |=(1<<PD6);
-  DDRD  |=(1<<PD7);
-  DDRB  |=(1<<PB0);
-  DDRB  |=(1<<PB1);
+  DDRD |= (1 << PD2);
+  DDRD |= (1 << PD3);
+  DDRD |= (1 << PD4);
+  DDRD |= (1 << PD5);
+  DDRD |= (1 << PD6);
+  DDRD |= (1 << PD7);
+  DDRB |= (1 << PB0);
+  DDRB |= (1 << PB1);
 
-  PORTD=Tabla_Digitos_7seg[5];
-  PORTB=Tabla_Digitos_7seg[5];
+  while (1)
+  {
+    if (bt1 == 0)
+    {
+      _delay_ms(150);
+      if (bt1 == 0)
+      {
+        cont++;
+        if (cont > 15)
+        {
+          cont = 0;
+        }
+      }
+    }
+
+    if (bt2 == 0)
+    {
+      _delay_ms(150);
+      if (bt2 == 0)
+      {
+        cont--;
+        if (cont < 0)
+        {
+          cont = 15;
+        }
+      }
+    }
+
+    PORTD = (PORTD & 0b00000011) | (Tabla_Digitos_7seg[cont] & 0b11111100);
+    PORTB = (PORTB & 0b11111100) | (Tabla_Digitos_7seg[cont] & 0b00000011);
+  }
 }
 /*********************************************************************************************************
 ** end of file
