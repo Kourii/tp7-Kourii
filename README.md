@@ -4,10 +4,10 @@
 
 1. Realizar un contador descendente de segundos que:
 
-* a. Mediante dos botones suba o baje el número a contar.
-* b. Un botón inicia la cuenta regresiva o la retoma en caso de haberse detenido.
-* c. Otro botón para la cuenta.
-* d. Al llegar a cero titilan los cuatro LEDs durante 5 segundos a una frecuencia de 1Hz.
+ - Mediante dos botones suba o baje el número a contar.
+ - Un botón inicia la cuenta regresiva o la retoma en caso de haberse detenido.
+ - Otro botón para la cuenta.
+ - Al llegar a cero titilan los cuatro LEDs durante 5 segundos a una frecuencia de 1Hz.
 
 >NOTAS:
 
