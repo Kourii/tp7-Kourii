@@ -198,12 +198,12 @@ PB1 -> SEGMENTO DP
 int main(void)
 {
 
-  DDRC &= ~(1 << PC0);
+  DDRC &= ~(1 << PC0);//botones
   DDRC &= ~(1 << PC1);
   DDRC &= ~(1 << PC2);
   DDRC &= ~(1 << PC3);
 
-  DDRD |= (1 << PD2);
+  DDRD |= (1 << PD2);//display
   DDRD |= (1 << PD3);
   DDRD |= (1 << PD4);
   DDRD |= (1 << PD5);
@@ -211,6 +211,9 @@ int main(void)
   DDRD |= (1 << PD7);
   DDRB |= (1 << PB0);
   DDRB |= (1 << PB1);
+
+  DDRB |= (1 << PB2);//masa de display no se como usarlo
+  DDRB |= (1 << PB3);
 
   while (1)
   {
@@ -220,7 +223,7 @@ int main(void)
       if (bt1 == 0)
       {
         cont++;
-        if (cont > 15)
+        if (cont > 99)
         {
           cont = 0;
         }
@@ -235,7 +238,7 @@ int main(void)
         cont--;
         if (cont < 0)
         {
-          cont = 15;
+          cont = 99;
         }
       }
     }
