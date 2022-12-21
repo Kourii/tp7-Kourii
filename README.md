@@ -14,3 +14,4 @@
 - [ ] No debe de haber rebotes.
 - [ ] El número máximo de segundos es 99.
 - [ ] El multiplexado se realiza con timer 0.
+- [ ] La eliminación de rebotes se realiza mediante detección de flancos.
